@@ -1,5 +1,6 @@
 <?php
 
+namespace fool;
 // Db单例对象
 
 class Db {
