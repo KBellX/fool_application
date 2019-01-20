@@ -23,6 +23,8 @@ class Handle
             
             // 生成环境
             echo 'this is server exception';
+            echo '<br />';
+            echo $e->getMessage();
         }
     }
 }

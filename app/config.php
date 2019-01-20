@@ -1,6 +1,7 @@
 <?php
 
-$CONFIG = [
+// $CONFIG = [
+return [
     'database' => [
         'read' => [
             'host' => '192.168.211.130',
