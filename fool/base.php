@@ -13,6 +13,7 @@ require FOOL_PATH . '/Loader.php';
 \fool\Loader::register();
 
 // 注册异常处理
+\fool\Error::register();
 
 // 加载配置文件
 require_once ROOT_PATH . '/config.php';
