@@ -1,6 +1,5 @@
 <?php
 
-// $CONFIG = [
 return [
     'database' => [
         'read' => [

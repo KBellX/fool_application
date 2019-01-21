@@ -21,12 +21,20 @@ class Config
      * */
     public static function load()
     {
-        $file = APP_PATH . 'config.php';
+        $env = defined("ENV") ? ENV : 'dev';
+
+        $file = APP_PATH . $env . '_config.php';
         if (!is_file($file)) {
             throw new FileException($file . 'is not exist');
         }
 
         self::$config = include $file;
+
+        // 本地配置文件
+        $localFile = APP_PATH . 'local_config.php';
+        if (is_file($localFile)) {
+            self::$config = array_merge(self::$config, include $localFile);
+        }
     }
 
     /*
