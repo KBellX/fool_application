@@ -20,10 +20,14 @@ class Handle
         if ($e instanceof ApiException) {
             echo 'this is api exception, render friendly response';
         } else {
-            // 开发环境
+            if (ENV == 'dev') {
+                // 开发环境, 直接抛出
+                throw $e;
+            } else {
+                // 生成环境, 记录日志
+                Logger::log(Logger::ERROR, $e->getMessage(), $e->getCode());
+            }
             
-            // 生成环境
-            Logger::log(Logger::ERROR, $e->getMessage(), $e->getCode());
         }
     }
 }
