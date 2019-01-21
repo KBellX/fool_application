@@ -3,6 +3,7 @@
 namespace fool\exception;
 
 use Exception;
+use fool\Logger;
 /*
  * 异常处理类
  *  写成类方便以后扩展
@@ -22,9 +23,7 @@ class Handle
             // 开发环境
             
             // 生成环境
-            echo 'this is server exception';
-            echo '<br />';
-            echo $e->getMessage();
+            Logger::log(Logger::ERROR, $e->getMessage(), $e->getCode());
         }
     }
 }

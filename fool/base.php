@@ -4,8 +4,10 @@ defined("FOOL_PATH") || define("FOOL_PATH", ROOT_PATH . 'fool' . DS);
 defined("APP_PATH") || define("APP_PATH", ROOT_PATH . 'app' . DS);
 define('EXT', '.php');
 defined("EXTEND_PATH") || define("EXTEND_PATH", ROOT_PATH . 'extend' . DS);
+defined("RUNTIME_PATH") || define("RUNTIME_PATH", ROOT_PATH . 'runtime' . DS);
 
 require FOOL_PATH . 'Loader.php';
+
 
 
 // 注册自动加载类
@@ -15,10 +17,10 @@ require FOOL_PATH . 'Loader.php';
 \fool\Error::register();
 
 // 加载配置文件
-// require_once ROOT_PATH . '/config.php';
-
-// 加载配置文件
 \fool\Config::load();
 
+// 设置时区
+date_default_timezone_set('Asia/Shanghai');
+
 // 初始化日志类
-\fool\Log::init();
+\fool\Logger::init();

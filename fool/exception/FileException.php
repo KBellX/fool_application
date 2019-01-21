@@ -4,9 +4,9 @@ namespace fool\exception;
 
 use fool\Exception;
 
-class ConfigException extends Exception
+class FileException extends Exception
 {
-    public function __construct($msg = 'config exception', $code = 1100)
+    public function __construct($msg, $code = 1200)
     {
         parent::__construct($msg, $code);
     }

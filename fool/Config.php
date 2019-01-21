@@ -6,7 +6,7 @@ namespace fool;
  * 操作配置文件的类
  * */
 
-use fool\exception\FileNotFoundException;
+use fool\exception\FileException;
 
 class Config
 {
@@ -23,7 +23,7 @@ class Config
     {
         $file = APP_PATH . 'config.php';
         if (!is_file($file)) {
-            throw new FileNotFoundException($file, 601);
+            throw new FileException($file . 'is not exist');
         }
 
         self::$config = include $file;
