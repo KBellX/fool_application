@@ -2,6 +2,10 @@
 
 namespace fool\exception;
 
+
+/*
+ * 600
+ * */
 use fool\Exception;
 
 class FileNotFoundException extends Exception

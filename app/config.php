@@ -20,4 +20,9 @@ return [
             'charset' => 'utf8'
         ]
     ],
+
+    'log' => [
+        'driver' => 'file',
+        'path' => './runtime/log',  // 如何区分根目录与当前目录
+    ],
 ];

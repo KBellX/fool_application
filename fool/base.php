@@ -19,3 +19,6 @@ require FOOL_PATH . 'Loader.php';
 
 // 加载配置文件
 \fool\Config::load();
+
+// 初始化日志类
+\fool\Log::init();
