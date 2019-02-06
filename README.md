@@ -1,2 +1,2 @@
-# group-buy-shop
-我的毕业设计
+# fool_framework
+A simple php framework.
