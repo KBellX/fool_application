@@ -27,6 +27,10 @@ class App
 
         $data = $c->$action();
 
+        Response::setData($data);
+
+        Response::send();
+
     }
 }
 
