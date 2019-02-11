@@ -1,0 +1,2 @@
+
+rewrite /api /index.php break;
