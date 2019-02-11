@@ -2,7 +2,7 @@
 
 namespace fool\exception;
 
-use Exception;
+// use \Exception;
 use fool\Logger;
 use fool\Response;
 /*
@@ -16,7 +16,7 @@ class Handle
      * @param \Exception $e php根异常
      * @return Response
      * */
-    public function render(Exception $e)
+    public function render(\Exception $e)
     {
         if ($e instanceof ApiException) {
             Response::setData([], $e->getMessage(), $e->getCode());

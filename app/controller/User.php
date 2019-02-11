@@ -16,7 +16,6 @@ class User {
         throw new ApiException('用户传参错误', 101);
 
 
-
         return [
             'a' => 'b',
             'c' => 'd'
